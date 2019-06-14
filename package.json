@@ -23,7 +23,12 @@
   },
   "dependencies": {
     "art-template": "^4.13.2",
+    "body-parser": "^1.19.0",
+    "connect-mongo": "^2.0.3",
+    "ejs": "^2.6.1",
     "express": "^4.17.1",
-    "express-art-template": "^1.0.1"
+    "express-art-template": "^1.0.1",
+    "express-session": "^1.16.2",
+    "mongodb": "^3.2.7"
   }
 }
