@@ -34,45 +34,29 @@
             <div class="table-responsive">
                 <table class="table table-striped ">
                     <thead>
-                    <tr>
+                      <tr>
                         <th>编号</th>
                         <th>图标</th>
                         <th>名称</th>
                         <th>价格</th>
-                        <th>邮费</th>
-                       
+                        <th>折扣</th>
                         <th class="text-center">操作</th>
-                    </tr>
+                      </tr>
                     </thead>
                     <tbody>
-
-                    <tr>
-                        <td>1</td>
-                        <td>图标</td>
-                        <td>背包1111111</td>
-                        <td>20元</td>
-                        <td>10元</td>
-                      
-                        <td class="text-center">修改  删除</td>
-                    </tr>
-					   <tr>
-                        <td>2</td>
-                        <td>图标</td>
-                        <td>thinpad笔记本电脑</td>
-                        <td>20元</td>
-                        <td>10元</td>
-                      
-                        <td class="text-center">修改  删除</td>
-                    </tr>
-					   <tr>
-                        <td>3</td>
-                        <td>图标</td>
-                        <td>iphone7</td>
-                        <td>20元</td>
-                        <td>10元</td>
-                      
-                        <td class="text-center">修改  删除</td>
-                    </tr>
+                      <% for(var i = 0; i < list.length; i++) { %>
+                      <tr>
+                        <td><%=i+1%></td>
+                        <td><img width="50" height="50" src="<%= list[i].pic %>"></td>
+                        <td><%= list[i].title %></td>
+                        <td><%= list[i].price %>元</td>
+                        <td><%= list[i].free %>元</td>
+                        <td class="text-center">
+                          <a href="/edit?id=<%= list[i]._id %>" class="btn btn-success">修改</a>
+                          <a href="/delete?id=<%= list[i]._id %>" class="btn btn-danger">删除</a>
+                        </td>
+                      </tr>
+                      <% } %>
                     </tbody> 
                 </table>
             </div>

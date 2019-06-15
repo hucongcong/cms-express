@@ -30,6 +30,7 @@
     "express-art-template": "^1.0.1",
     "express-session": "^1.16.2",
     "md5": "^2.2.1",
-    "mongodb": "^3.2.7"
+    "mongodb": "^3.2.7",
+    "multer": "^1.4.1"
   }
 }
